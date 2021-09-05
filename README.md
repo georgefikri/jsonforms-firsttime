@@ -15,3 +15,7 @@ create dynamic form using schema & uischema
 # NOTE
 
 - i can replace any material-ui package with anything else i want
+
+# References:
+
+- [https://jsonforms.io/docs/tutorial/](https://jsonforms.io/docs/tutorial/).
