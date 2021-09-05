@@ -1,24 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { JsonForms } from "@jsonforms/react";
+import schema from "./schema.json";
+import uischema from "./uischema.json";
+
+import { myAppTester } from "./AppTester";
+import AppRenderer from "./AppRenderer";
+import { materialRenderers } from "@jsonforms/material-renderers";
+
+const initialData = {
+  name: "",
+  address: "",
+};
+
+const renderers = [
+  ...materialRenderers,
+  {
+    tester: myAppTester,
+    renderer: AppRenderer,
+  },
+];
 
 function App() {
+  const [data, setData] = useState(initialData);
+  console.log("data", data);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <JsonForms
+        schema={schema}
+        uischema={uischema}
+        data={data}
+        renderers={renderers}
+        // cells={materialCells}
+        onChange={({ data }) => setData(data)}
+      />
     </div>
   );
 }

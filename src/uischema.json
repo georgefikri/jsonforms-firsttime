@@ -1,0 +1,15 @@
+{
+  "type": "Group",
+  "elements": [
+    {
+      "type": "Control",
+      "scope": "#/properties/name",
+      "label": "First name"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/address",
+      "label": "Address"
+    }
+  ]
+}
