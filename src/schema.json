@@ -6,6 +6,15 @@
     },
     "address": {
       "type": "string"
+    },
+    "rating": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "exampleRadioEnum": {
+      "type": "string",
+      "enum": ["One", "Two", "Three"]
     }
   }
 }

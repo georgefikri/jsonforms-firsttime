@@ -10,6 +10,17 @@
       "type": "Control",
       "scope": "#/properties/address",
       "label": "Address"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/rating"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/exampleRadioEnum",
+      "options": {
+        "format": "radio"
+      }
     }
   ]
 }

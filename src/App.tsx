@@ -10,6 +10,8 @@ import { materialRenderers } from "@jsonforms/material-renderers";
 const initialData = {
   name: "",
   address: "",
+  rating: null,
+  exampleRadioEnum: "",
 };
 
 const renderers = [
