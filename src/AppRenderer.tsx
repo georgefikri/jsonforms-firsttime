@@ -11,6 +11,7 @@ type IState = {
   renderers: any;
 };
 
+// partials ( utility type) ==> we gonna have some of the fields
 const AppRenderer = (props: Partial<IState>) => {
   return (
     <div>
